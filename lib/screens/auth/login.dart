@@ -103,15 +103,15 @@ class _LoginPageState extends State<LoginPage> {
                 const Text(
                     'If you are a prospective student, not registered at this institution, please select one of the following options:'),
                 const SizedBox(height: 16),
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     Icon(Icons.house_rounded),
                     SizedBox(width: 16),
                     Text('View a list of study areas.')
                   ],
                 ),
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     Icon(Icons.people),
                     SizedBox(width: 16),
                     Text('View a list of study areas.')
@@ -182,7 +182,7 @@ class _LoginPageState extends State<LoginPage> {
                           color: Colors.blue,
                           borderRadius: BorderRadius.all(Radius.circular(10))),
                       child: const Text(
-                        'Request Pin',
+                        'Forgot Stud Num',
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
