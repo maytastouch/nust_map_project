@@ -23,19 +23,19 @@ class _OptionRowState extends State<OptionRow> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        _buildOption('student'),
+        _buildOption('Student'),
         const SizedBox(
           width: 24,
         ),
-        _buildOption('personnel'),
+        _buildOption('Personnel'),
         const SizedBox(
           width: 24,
         ),
-        _buildOption('other'),
+        _buildOption('Other'),
         const SizedBox(
           width: 24,
         ),
-        _buildOption('alumni'),
+        _buildOption('Alumni'),
       ],
     );
   }
