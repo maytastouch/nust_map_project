@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nust/widgets/btm_bar.dart';
 import 'package:nust/widgets/optionRow.dart';
 
 class LoginPage extends StatefulWidget {
@@ -11,6 +12,19 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   late String _selectedOption;
   String _password = '';
+  final _emailTextController = TextEditingController();
+  final _passTextController = TextEditingController();
+  final _passFocusNode = FocusNode();
+
+  @override
+  void dispose() {
+    _emailTextController.dispose();
+    _passTextController.dispose();
+    _passFocusNode.dispose();
+    super.dispose();
+  }
+
+  void _submitFormOnLogin() {}
 
   @override
   void initState() {
@@ -49,6 +63,8 @@ class _LoginPageState extends State<LoginPage> {
                 labelText: 'User details',
                 border: OutlineInputBorder(),
               ),
+              controller: _emailTextController,
+              keyboardType: TextInputType.emailAddress,
             ),
           ),
           const SizedBox(height: 16),
@@ -65,6 +81,11 @@ class _LoginPageState extends State<LoginPage> {
                 labelText: 'Password',
                 border: OutlineInputBorder(),
               ),
+              onEditingComplete: () {
+                _submitFormOnLogin();
+              },
+              controller: _passTextController,
+              keyboardType: TextInputType.visiblePassword,
             ),
           ),
           const SizedBox(height: 16),
@@ -79,7 +100,13 @@ class _LoginPageState extends State<LoginPage> {
                 style: TextStyle(color: Colors.white),
               ),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const BottomBarScreen()),
+              );
+            },
           ),
           const SizedBox(height: 30),
           Container(

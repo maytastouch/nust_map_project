@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nust/screens/auth/login.dart';
 import 'package:nust/widgets/textWidget.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
@@ -97,7 +98,12 @@ class _PointNavBarState extends State<PointNavBar> {
             title: 'Logout',
             icon: IconlyLight.logout,
             color: Colors.blue,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const LoginPage()),
+              );
+            },
           ),
         ],
       ),

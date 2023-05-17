@@ -11,7 +11,7 @@ class SchoolLeavingInfo extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'NAMIBIA UNIVERSITY OF SCIENCE AND TECHNOLOGY',
-          style: TextStyle(fontSize: 13),
+          style: TextStyle(fontSize: 12),
         ),
         elevation: 0,
       ),

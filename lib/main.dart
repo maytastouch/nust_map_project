@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nust/widgets/btm_bar.dart';
+import 'package:nust/screens/auth/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const BottomBarScreen(),
-      //home: const LoginPage(),
+      //home: const BottomBarScreen(),
+      home: const LoginPage(),
     );
   }
 }
